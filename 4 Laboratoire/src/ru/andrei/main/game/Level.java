@@ -53,9 +53,8 @@ public class Level {
 			for (int y = 0; y < width; y++) {
 				// Permet de naviguer dans l'image par rapport à un x & y
 				int i = x + y * width;
-				// Si pixel est blanc on l'chopppe par le col
 				if (pixels[i] == 0xFF000000) { blocks[i] = new Block(x, y); }
-				// Si pixel est noir on l'choppe par le col aussi (mais il est solid)
+
 				if (pixels[i] == 0xFFffffff) { blocks[i] = new SolidBlock(x, y); }
 			} 
 		}
